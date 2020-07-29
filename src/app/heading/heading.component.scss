@@ -1,0 +1,47 @@
+:host {
+  width: 100%;
+}
+
+.app-heading {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+
+  .image-container {
+    width: 45%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .heading-container {
+    width: 55%;
+
+    h1 {
+      font-size: 75px;
+      font-weight: normal;
+    }
+  }
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 950px) {
+  .app-heading {
+    .image-container {
+      width: 60%;
+    }
+    .heading-container {
+      width: 40%;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .app-heading {
+    .image-container,
+    .heading-container {
+      width: 100%;
+    }
+  }
+}
