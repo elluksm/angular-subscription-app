@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SubscriptionFormComponent } from './subscription-form/subscription-form.component';
 import { HeadingComponent } from './heading/heading.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

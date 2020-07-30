@@ -1,1 +1,32 @@
-<div class="form-container">Form</div>
+<div class="form-container">Form
+    <form #subscriptionForm="ngForm">
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="text" #email class="form-control" id="email" required [(ngModel)]="model.email" name="email">
+
+            <div *ngIf="email.invalid">
+                Please input a valid email address.
+            </div>
+            <div *ngIf="email.required">
+                Email is required.
+            </div>
+
+            DEBUG: TODO: remove this: {{model.email}}
+
+        </div>
+        <div class="form-group">
+            <label for="subscriptionType">Choose the price</label>
+            <input type="radio" value="monthly" name="subscriptionType" required [(ngModel)]="model.subscriptionType">
+            Monthly
+            <input type="radio" value="weekly" name="subscriptionType" required [(ngModel)]="model.subscriptionType">
+            Weekly
+
+            DEBUG: TODO: remove this: {{model.subscriptionType}}
+
+        </div>
+        <div class="form-group">
+            <button>Submit</button>
+        </div>
+
+    </form>
+</div>
