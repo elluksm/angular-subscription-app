@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UploadComponent } from '../upload/upload.component';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-toolbar',
@@ -7,8 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) {}
 
+
+  uploadModal(): void {
+    const dialogRef = this.dialog.open(UploadComponent, {});
+  }
   ngOnInit(): void {
   }
 

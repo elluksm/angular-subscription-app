@@ -8,6 +8,9 @@ import { SubscriptionFormComponent } from './subscription-form/subscription-form
 import { HeadingComponent } from './heading/heading.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { UploadComponent } from './upload/upload.component';
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -15,12 +18,14 @@ import { FormsModule } from '@angular/forms';
     ToolbarComponent,
     FooterComponent,
     SubscriptionFormComponent,
-    HeadingComponent
+    HeadingComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
