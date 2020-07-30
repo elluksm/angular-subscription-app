@@ -1,5 +1,13 @@
 .content {
-    display: flex;
-    margin: 120px auto 120px;
-    flex-direction: column;
+  display: flex;
+  margin: 120px auto 120px;
+  flex-direction: column;
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 575px) {
+  .content {
+    margin: 100px auto 120px;
   }
+}

@@ -2,6 +2,7 @@
 @import "styles/_variables.scss";
 
 body {
+  margin: 0;
   font-family: "Barlow", Roboto, Open Sans, sans-serif;
   font-size: 16px;
   color: var(--dark-brown);
@@ -10,6 +11,15 @@ body {
   .container {
     max-width: 1160px;
     display: flex;
+    width: 100%;
     padding: 0 140px;
+  }
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 1250px) {
+  body .container {
+    padding: 0 50px;
   }
 }
