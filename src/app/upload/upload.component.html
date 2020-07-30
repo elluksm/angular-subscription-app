@@ -1,17 +1,47 @@
-<p>Upload your files</p>
+<div class="upload-modal">
+  <h2 class="modal-heading">Upload your files</h2>
 
-<ngx-file-drop dropZoneLabel="Drop files here" (onFileDrop)="dropped($event)" (onFileOver)="fileOver($event)"
-    (onFileLeave)="fileLeave($event)">
-    <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
-        
-        Icon here!
+  <ngx-file-drop
+    dropZoneLabel="Drop files here"
+    (onFileDrop)="dropped($event)"
+    (onFileOver)="fileOver($event)"
+    (onFileLeave)="fileLeave($event)"
+  >
+    <ng-template
+      ngx-file-drop-content-tmp
+      let-openFileSelector="openFileSelector"
+    >
+      <div>
+        <svg
+          width="32"
+          height="38"
+          viewBox="0 0 32 38"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0.833353 24.5H9.50002L9.50002 37.5L22.5 37.5L22.5 24.5H31.1667L16 9.33333L0.833353 24.5ZM31.1667 5V0.666668L0.833353 0.666668V5L31.1667 5Z"
+            fill="#F4511E"
+          />
+        </svg>
+      </div>
 
-        <span> Drop your files here </span>
-        <span>or choose from your
-            <button type="button" (click)="openFileSelector()">computer</button>
-            <button mat-button (click)="openFileSelector()" color="warn">computer</button>
-        </span>
+      <p class="large-modal-text">Drop your files here</p>
+      <p>
+        or choose from your
+        <button
+          mat-button
+          (click)="openFileSelector()"
+          color="warn"
+          class="file-selector-button"
+        >
+          computer
+        </button>
+      </p>
     </ng-template>
-</ngx-file-drop>
+  </ngx-file-drop>
 
-<button mat-button (click)="closeModal()" color="warn">Close</button>
+  <div class="close-modal-button">
+    <button mat-button (click)="closeModal()" color="warn">Close</button>
+  </div>
+</div>

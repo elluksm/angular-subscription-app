@@ -5,7 +5,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 @Component({
   selector: 'app-upload',
   templateUrl: './upload.component.html',
-  styleUrls: ['./upload.component.scss']
+  styleUrls: ['./upload.component.scss'],
 })
 export class UploadComponent implements OnInit {
   public files: NgxFileDropEntry[] = [];
@@ -13,13 +13,11 @@ export class UploadComponent implements OnInit {
   constructor(public dialogRef: MatDialogRef<UploadComponent>
     ) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   public dropped(files: NgxFileDropEntry[]): void {
     this.files = files;
     for (const droppedFile of files) {
-
       if (droppedFile.fileEntry.isFile) {
         const fileEntry = droppedFile.fileEntry as FileSystemFileEntry;
         fileEntry.file((file: File) => {
@@ -28,11 +26,11 @@ export class UploadComponent implements OnInit {
       }
     }
   }
-  public fileOver(event): void{
+  public fileOver(event): void {
     console.log(event);
   }
- 
-  public fileLeave(event): void{
+
+  public fileLeave(event): void {
     console.log(event);
   }
 

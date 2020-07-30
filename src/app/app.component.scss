@@ -1,6 +1,6 @@
 .content {
   display: flex;
-  margin: 120px auto 120px;
+  margin: 120px auto 110px;
   flex-direction: column;
 }
 
@@ -8,6 +8,6 @@
 
 @media screen and (max-width: 575px) {
   .content {
-    margin: 100px auto 120px;
+    margin: 100px auto 110px;
   }
 }

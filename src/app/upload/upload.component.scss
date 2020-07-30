@@ -1,8 +1,45 @@
+.upload-modal {
+  .modal-heading {
+    margin: 75px 0 50px;
+    font-size: 34px;
+    font-weight: normal;
+    text-align: center;
+  }
 
-ngx-file-drop ::ng-deep div.ngx-file-drop__drop-zone{
+  p {
+    margin: 0;
+  }
 
+  p.large-modal-text {
+    margin: 40px 0 0;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  button.file-selector-button {
+    padding: 0;
+  }
+
+  .close-modal-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+    button {
+      font-size: 18px;
+    }
+  }
 }
 
-// ngx-file-drop ::ng-deep div.ngx-file-drop__drop-zone{
-//     background-color: red;
-// }
+ngx-file-drop ::ng-deep div.ngx-file-drop__drop-zone {
+  width: 350px;
+  min-height: 200px;
+  border: 3px dashed var(--grey);
+  border-radius: 6px;
+
+  .ngx-file-drop__content {
+    flex-direction: column;
+    margin-top: 70px;
+    color: var(--dark-grey);
+  }
+}

@@ -91,6 +91,10 @@
     background-color: var(--dark-blue);
     border-radius: 4px;
     color: white;
+
+    &:disabled {
+      opacity: 0.5;
+    }
   }
 }
 
