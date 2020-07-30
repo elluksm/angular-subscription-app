@@ -5,7 +5,11 @@
   "projects": {
     "angular-subscription-app": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -119,12 +123,6 @@
           }
         }
       }
-    }
-  },
-  "defaultProject": "angular-subscription-app",
-  "schematics": {
-    "@schematics/angular:component": {
-      "styleext": "scss"
-    }
-  }
+    }},
+  "defaultProject": "angular-subscription-app"
 }
