@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FileSystemFileEntry, NgxFileDropEntry } from 'ngx-file-drop';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-upload',
@@ -9,7 +10,8 @@ import { FileSystemFileEntry, NgxFileDropEntry } from 'ngx-file-drop';
 export class UploadComponent implements OnInit {
   public files: NgxFileDropEntry[] = [];
 
-  constructor() { }
+  constructor(public dialogRef: MatDialogRef<UploadComponent>
+    ) { }
 
   ngOnInit(): void {
   }
@@ -32,5 +34,9 @@ export class UploadComponent implements OnInit {
  
   public fileLeave(event): void{
     console.log(event);
+  }
+
+  closeModal(): void {
+    this.dialogRef.close();
   }
 }
