@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { UploadComponent } from './upload/upload.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { NgxFileDropModule } from 'ngx-file-drop';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    NgxFileDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
