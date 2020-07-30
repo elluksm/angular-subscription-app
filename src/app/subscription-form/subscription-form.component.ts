@@ -17,7 +17,4 @@ export class SubscriptionFormComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  // TODO: DEBUG
-  get diagnostic(): string { return JSON.stringify(this.model); }
-
 }

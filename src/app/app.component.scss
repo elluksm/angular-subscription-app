@@ -1,5 +1,11 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
 .content {
   display: flex;
+  flex-grow: 1;
   margin: 120px auto 110px;
   flex-direction: column;
 }

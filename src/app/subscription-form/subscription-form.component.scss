@@ -38,6 +38,13 @@
       font-size: 16px;
       opacity: 1;
     }
+
+    &.ng-valid[required], input.ng-valid.required  {
+      border-left: 10px solid var(--green);
+    }
+    &.ng-invalid:not(form):not(.ng-pristine)  {
+      border-left: 10px solid var(--red);
+    }
   }
 
   .radio-button-container {
