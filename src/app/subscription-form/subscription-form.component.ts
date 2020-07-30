@@ -11,9 +11,13 @@ export class SubscriptionFormComponent implements OnInit {
 
   model = new Subscription();
 
-  submitted = false;
-
-  onSubmit() { this.submitted = true; }
+  onSubmit(): void {
+    console.log('form submitted!', JSON.stringify(this.model));
+  }
 
   ngOnInit(): void { }
+
+  // TODO: DEBUG
+  get diagnostic(): string { return JSON.stringify(this.model); }
+
 }
