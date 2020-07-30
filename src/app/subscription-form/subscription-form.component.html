@@ -1,30 +1,82 @@
-<div class="form-container">
-    TODO: DEBUG: {{diagnostic}}
-
+<div class="subsription-form-container container">
+  <div class="subsription-form">
     <form (ngSubmit)="onSubmit()" #subscriptionForm="ngForm">
-        <div class="form-group"><label for="email">Email address</label>
-            <input type="email" #email="ngModel" class="form-control" id="email" required [(ngModel)]="model.email"
-                name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-            <div *ngIf="email.touched">
-                <p *ngIf="email.errors?.required">Email is a required field!</p>
-                <p *ngIf="email.errors?.pattern">This is not a valid Email!!!</p>
-
-                <p *ngIf="email.errors?.invalid">This is not a valid Email!!!</p>
-
-            </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input
+          type="email"
+          #email="ngModel"
+          class="form-control"
+          id="email"
+          required
+          [(ngModel)]="model.email"
+          name="email"
+          placeholder="Your email"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        />
+        <div *ngIf="email.touched">
+          <p *ngIf="email.errors?.required" class="error-message">
+            Email is a required field!
+          </p>
+          <p *ngIf="email.errors?.pattern" class="error-message">
+            This is not a valid Email!
+          </p>
+          <p *ngIf="email.errors?.invalid" class="error-message">
+            This is not a valid Email!
+          </p>
         </div>
-        <div class="form-group">
-            <label for="subscriptionType">Choose the price</label>
-            <input class="radio-button-card" [class.selected]="model.subscriptionType == 'monthly'" type="radio" value="monthly" name="subscriptionType" required [(ngModel)]="model.subscriptionType">
-            Monthly
-            <input class="radio-button-card" [class.selected]="model.subscriptionType == 'weekly'" type="radio" value="weekly" name="subscriptionType" required [(ngModel)]="model.subscriptionType">
-            Weekly
+      </div>
 
-
+      <div class="form-group">
+        <label for="subscriptionType" class="large-label"
+          >Choose the price</label
+        >
+        <div class="radio-button-container">
+          <div class="radio-button-card" [class.selected]="model.subscriptionType == 'monthly'">
+            <input
+              type="radio"
+              id="monthly"
+              value="monthly"
+              name="subscriptionType"
+              required
+              [(ngModel)]="model.subscriptionType"
+            />
+            <label for="monthly"
+              ><p class="large-card-text">
+                <sup class="superscript-text">€</sup>120
+              </p>
+              <p>monthly</p></label
+            >
+          </div>
+          <div class="radio-button-card" [class.selected]="model.subscriptionType == 'weekly'">
+            <input
+              type="radio"
+              id="weekly"
+              value="weekly"
+              name="subscriptionType"
+              required
+              [(ngModel)]="model.subscriptionType"
+            />
+            <label for="weekly"
+              ><p class="large-card-text">
+                <sup class="superscript-text">€</sup>40
+              </p>
+              <p>weekly</p></label
+            >
+          </div>
         </div>
-        <div class="form-group">
-            <button [disabled]="!subscriptionForm.form.valid">Submit</button>
-        </div>
+      </div>
 
+      <div class="form-group">
+        <div class="submit-button-container">
+          <button
+            [disabled]="!subscriptionForm.form.valid"
+            class="submit-button"
+          >
+            Send
+          </button>
+        </div>
+      </div>
     </form>
+  </div>
 </div>
